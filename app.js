@@ -192,7 +192,7 @@ let map = {
     vietanh: 7
 }
 
-function returnB(input){
+function returnB(input) {
     // let b = 0;
     // switch (input.toUpperCase()) 
     // {
@@ -215,15 +215,74 @@ function returnB(input){
     // }
 
     // return b
-    let result = null;
-    result = map[input.toLowerCase()] //map["vinh"]
-    if(result == null){
-        throw new Error("invalid input");
-    }
-    return result
+
+    // let result = null;
+    // result = map[input.toLowerCase()] //map["vinh"]
+    // if(result == null){
+    //     throw new Error("invalid input");
+    // }
+    // return result
 }
 
-let a = "binh"
-let b = returnB(a)
-console.log(`currently input = ${a}, has value ${b}`)
+// let a = "binh"
+// let b = returnB(a)
+// console.log(`currently input = ${a}, has value ${b}`)
+
+// function forEachOfDuy(array, handler(item, index)) =>...
+// let arr = ["a", "b", "c", "d"];
+
+// function forEachOfDuy(arr, handler) {
+//     for (let item of arr) {
+//         handler(item);
+//         console.log(ty + "B")
+//         // console.log(typeof arr)
+//     }
+//     for ( let i = 0; i < arr.length; i++){
+//         console.log(arr[i] + "A")
+//     }
+// }
+
+// forEachOfDuy(arr, function (item, index) {
+//     // console.log(item)
+//     // console.log(index);
+// })
+// var arr = [1,2,3]
+
+// function reduceOfDuy(param, handler, initialValue) {
+//     let total = initialValue || null
+//     for (let i = 0; i < param.length; i++) {
+//         total = handler(total, param[i], i, param);
+//     }
+//     return total;
+// }
+
+
+// console.log(
+//     reduceOfDuy([{a: 1}, {a: 2}, {a: 3}],(total, currentValue)=>{ 
+//         total.push(currentValue.a)
+//         return total
+// }, [])
+// )
+
+function ObjAssignOfDuy(...paramObjs){
+    let totalObj = null
+
+    for (let item of paramObjs) {
+        if (totalObj == null) {
+            totalObj = item;
+            continue;
+        }
+        for ( let prop in item) {
+            totalObj[prop] = item[prop];
+        }
+    }
+
+    return totalObj;
+}
+
+console.log( 
+    ObjAssignOfDuy({a:3}, {b:4}, {c:5})
+)
+
+console.log(Object.assign({a:3}, {b:4}, {c:5}))
 
