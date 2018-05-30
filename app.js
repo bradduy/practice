@@ -23,7 +23,9 @@
 //         })
 //     });
 // }
-
+//####################################################################
+//####################################################################
+//####################################################################
 // const fs = require('fs');
 
 // let files = ['./text1.txt', './text2.txt', './text3.txt']
@@ -47,9 +49,9 @@
 //          }
 //     });
 // }
-
-
-
+//####################################################################
+//####################################################################
+//####################################################################
 // function filterNew(inputSearches, keyWord) {
 //     let outputSearch = [];
 
@@ -62,10 +64,11 @@
 //         }
 //     }
 // }
-
 // filterNew(['a', 'b', 'a'], 'a');
 
-
+//####################################################################
+//###########...Filter...#############################################
+//####################################################################
 // function filterOfDuy(array, op){
 //     let result = []
 //     for(let i = 0; i < array.length; i++){
@@ -75,7 +78,12 @@
 //     }
 //     return result
 // }
+// var r = filterOfDuy([1, 2, 3], (item) => { return item%2===0});
+// console.log(r)
 
+//###################################################################
+//###########...Map...###############################################
+//###################################################################
 // function mapNew(input, op) {
 
 //     let result = [];
@@ -184,15 +192,17 @@ else
 output b
 console.log(`currently input = ${<input>}, has value ${<output>}`)
 */
+//############################################################################
+//###########...Map/Switch-Case...############################################
+//############################################################################
+// let map = {
+//     "vinh": 4,
+//     "binh": 4,
+//     "duy": 3,
+//     vietanh: 7
+// }
 
-let map = {
-    "vinh": 4,
-    "binh": 4,
-    "duy": 3,
-    vietanh: 7
-}
-
-function returnB(input) {
+// function returnB(input) {
     // let b = 0;
     // switch (input.toUpperCase()) 
     // {
@@ -222,12 +232,14 @@ function returnB(input) {
     //     throw new Error("invalid input");
     // }
     // return result
-}
+// }
 
 // let a = "binh"
 // let b = returnB(a)
 // console.log(`currently input = ${a}, has value ${b}`)
-
+//############################################################################
+//###########...ForEach...####################################################
+//############################################################################
 // function forEachOfDuy(array, handler(item, index)) =>...
 // let arr = ["a", "b", "c", "d"];
 
@@ -247,7 +259,9 @@ function returnB(input) {
 //     // console.log(index);
 // })
 // var arr = [1,2,3]
-
+//############################################################################
+//###########...Reduce...#####################################################
+//############################################################################
 // function reduceOfDuy(param, handler, initialValue) {
 //     let total = initialValue || null
 //     for (let i = 0; i < param.length; i++) {
@@ -264,7 +278,7 @@ function returnB(input) {
 // }, [])
 // )
 
-function ObjAssignOfDuy(...paramObjs){
+function ObjAssignOfDuy(...paramObjs) {
     let totalObj = null
 
     for (let item of paramObjs) {
@@ -272,7 +286,7 @@ function ObjAssignOfDuy(...paramObjs){
             totalObj = item;
             continue;
         }
-        for ( let prop in item) {
+        for (let prop in item) {
             totalObj[prop] = item[prop];
         }
     }
@@ -280,9 +294,9 @@ function ObjAssignOfDuy(...paramObjs){
     return totalObj;
 }
 
-console.log( 
-    ObjAssignOfDuy({a:3}, {b:4}, {c:5})
+console.log(
+    ObjAssignOfDuy({ a: 3 }, { b: 4 }, { c: 5 })
 )
 
-console.log(Object.assign({a:3}, {b:4}, {c:5}))
+console.log(Object.assign({ a: 3 }, { b: 4 }, { c: 5 }))
 
