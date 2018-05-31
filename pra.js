@@ -70,3 +70,19 @@ while (m = symbolRegEx.exec(a)) {
 //     console.log(match)
 // }
 // testSymbolRegEx("%#@%#dfds")
+
+//############################################################################
+//###########...Factorial Function!...########################################
+//############################################################################
+
+function factorial(n) {
+  let firstnum = 1;
+  for (let i = 1; i <= n; i++){
+    firstnum *= i;
+  }
+  return firstnum;
+};
+
+let result = factorial(10);
+
+console.log(result)
